@@ -209,25 +209,97 @@ menuBtn.addEventListener("click", () => {
                 });
             });
         });
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Formani qayta yuklashni oldini olamiz
+   
         
-            let name = document.getElementById("name").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let message = document.getElementById("message").value.trim();
-            let response = document.getElementById("formResponse");
+
+
         
-            if (name === "" || email === "" || message === "") {
-                response.textContent = "Iltimos, barcha maydonlarni to‘ldiring!";
-                response.style.color = "red";
+        
+        
+        // document.getElementById("submitBtn").addEventListener("click", function () {
+        //     const botToken = "8081073963:AAFbg0-LbTtBboGeU1Ppu0aejF29GUccDV0"; // Bot tokeningizni yozing
+        //     const chatId = "3535763"; // Telegram chat yoki group ID
+            
+        //     const name = document.getElementById("userName").value.trim();
+        //     const email = document.getElementById("userEmail").value.trim();
+        //     const message = document.getElementById("userMessage").value.trim();
+        
+        //     // Email validatsiyasi
+        //     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        //     if (!name || !email || !message) {
+        //         alert("Barcha maydonlarni to‘ldiring!");
+        //         return;
+        //     }
+        
+        //     if (!emailPattern.test(email)) {
+        //         alert("Iltimos, to‘g‘ri email kiriting! (masalan: example@gmail.com)");
+        //         return;
+        //     }
+        
+        //     const text = `📩 *New Message!*\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n📝 *Message:* ${message}`;
+        //     const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}&parse_mode=Markdown`;
+        
+        //     fetch(url)
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             if (data.ok) {
+        //                 alert("Xabar yuborildi!");
+        //                 document.getElementById("userName").value = "";
+        //                 document.getElementById("userEmail").value = "";
+        //                 document.getElementById("userMessage").value = "";
+        //             } else {
+        //                 alert("Xatolik yuz berdi! Iltimos, qayta urinib ko‘ring.");
+        //             }
+        //         })
+        //         .catch(error => {
+        //             alert("Server xatosi: " + error.message);
+        //             console.error("Error:", error);
+        //         });
+        // });
+        
+       
+        
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            
+            
+            const botToken = "8081073963:AAFbg0-LbTtBboGeU1Ppu0aejF29GUccDV0"; // Bot tokeningizni yozing
+            const chatId = "7116299492"; // Telegram chat yoki group ID
+            
+            const name = document.getElementById("userName").value.trim();
+            const email = document.getElementById("userEmail").value.trim();
+            const message = document.getElementById("userMessage").value.trim();
+        
+            // Email validatsiyasi
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+            if (!name || !email || !message) {
+                alert("Boshidan to'ldiring!!!");
                 return;
             }
         
-            response.textContent = "So‘rovingiz muvaffaqiyatli jo‘natildi!";
-            response.style.color = "#00ff88";
+            if (!emailPattern.test(email)) {
+                alert("Iltimos, to‘g‘ri email kiriting! (masalan: example@gmail.com)");
+                return;
+            }
         
-            // Formani tozalash
-            document.getElementById("contactForm").reset();
+            const text = `📩 *New Message!*\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n📝 *Message:* ${message}`;
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}&parse_mode=Markdown`;
+        
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert("Xabar yuborildi!");
+                        document.getElementById("userName").value = "";
+                        document.getElementById("userEmail").value = "";
+                        document.getElementById("userMessage").value = "";
+                    } else {
+                        alert("Xatolik yuz berdi!");
+                    }
+                })
+                .catch(error => console.error("Error:", error));
         });
-        
-        
+        function refresh() {
+            window.location.reload();
+        }
