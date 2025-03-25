@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="bg-gray-800"  >
+      <div class="left__wrap">
+        <button id="menu" class=" text-white text-2xl "><i class="fa-solid fa-bars"></i></button>
+          <a href="./index.html">
+            <span class="span__title">ABDUVOHID</span>
+            <span class="span__title2 text-green-800">.UZ</span>
+          </a>
+      </div>
+      <ul class="header__list">
+        <li class="header__item">
+            <a class="header__Link" href="./index.html">HOME</a>
+        </li>
+        <li class="header__item">
+            <a class="header__Link" href="./about.html">ABOUT</a>
+        </li>
+        <li class="header__item">
+            <a class="header__Link" href="./projects.html">PROJECTS</a>
+        </li>
+        <li class="header__item">
+            <a class="header__Link" href="./contact.html">CONTACTS</a>
+        </li>
+        <li class="header__item">
+            <a href="https://github.com/Nabievabduvohid">
+                <img src="./images/githhublogo.png" alt="">
+            </a>
+        </li>
+      </ul>
+      <button class="header__button">
+        <img src="./images/hamburger btn.png" alt="">
+      </button>
+    </header>
+    <aside class="sidebar p-5 text-white" id="sidebar" >
+        <button id="closeSidebar" class="bg-red-500 w-full h-[50px] py-2 rounded-lg mb-4">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    
+        <!-- Profil rasmi -->
+        <div class="flex justify-center">
+            <img src="./images/photo_2025-03-23_10-26-38.jpg" class=" w-full rounded-tr-3xl rounded rounded-bl-3xl   border-2 border-green-400">
+        </div>
+    
+        <!-- Ism va kasb -->
+        <h2 class="text-center text-xl font-semibold mt-3">Nabiyev Abduvohid</h2>
+        <p class="text-center text-sm text-gray-400" data-key="profession">Web Developer | Designer</p>
+    
+        <!-- Tajriba yoki Rollar -->
+        <div class="flex flex-wrap justify-center gap-2 mt-3">
+            <span class="bg-gray-700 px-3 py-1 rounded-lg text-xs" data-key="frontend">Frontend</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-lg text-xs" data-key="uiux">UI/UX</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-lg text-xs" data-key="freelancer">Freelancer</span>
+        </div>
+    
+        <!-- Ijtimoiy tarmoqlar -->
+        <div class="mt-5">
+            <p class="text-sm font-semibold" data-key="email">E-pochta</p>
+            <a href="https://mailto:abduvohidnabiev99@gmail.com" class="text-green-400 text-xs">abduvohidnabiev99@gmail.com</a>
+    
+            <p class="text-sm font-semibold mt-3" data-key="github">GitHub</p>
+            <a href="https://github.com/Nabievabduvohid" class="text-green-400 text-xs">github.com/Nabievabduvohid</a>
+    
+            <p class="text-sm font-semibold mt-3" data-key="telegram">Telegram</p>
+            <a href="https://t.me/nabiev012" class="text-green-400 text-xs">t.me/@nabiev012</a>
+    
+            <p class="text-sm font-semibold mt-3" data-key="phone">Telefon</p>
+            <p class="text-xs text-gray-400">+998 (94) 954-02-43</p>
+        </div>
+    </aside>
+    <main>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="">
+                <p id="modal-tags"></p>
+            </div>
+        </div>
+        
+       <div class="header">
+        <h1 class="loyih">Loyihalar</h1>
+        <input type="text" id="search" placeholder="Search...">
+       </div>
+       <div class="projects">
+        <div class="project-card">
+            <img src="./images/photo_2025-03-23_10-26-38.jpg" alt="Portfolio">
+            <h2>PORTFOLIO</h2>
+            <p>#HTML #TailwindCSS #CSS #JavaScript #Website</p>
+            <div class="card-icons">
+                <button class="view-btn"><i class="eye-icon">👁</i></button>
+                <a href="https://your-project-link.com" target="_blank" class="link-btn"><i class="link-icon">🔗</i></a>
+                <a href="https://github.com/Nabievabduvohid" target="_blank" class="github-btn"><i class="github-icon">🐱</i></a>
+            </div>
+        </div>
+    
+        <div class="project-card">
+            <img src="./images/evafrus.png" alt="evagrus">
+            <h2>Evagrus part 1</h2>
+            <p>#HTML #TailwindCSS #JavaScript #Website</p>
+            <div class="card-icons">
+                <button class="view-btn"><i class="eye-icon">👁</i></button>
+                <a href="https://nabievabduvohid.github.io/4oy-5/" target="_blank" class="link-btn"><i class="link-icon">🔗</i></a>
+                <a href="https://github.com/Nabievabduvohid" target="_blank" class="github-btn"><i class="github-icon">🐱</i></a>
+            </div>
+        </div>
+    
+        <div class="project-card">
+            <img src="./images/wb.png" alt="Live Time">
+            <h2>Velosipeds</h2>
+            <p>#JavaScript #API #wb #TailwindCSS</p>
+            <div class="card-icons">
+                <button class="view-btn"><i class="eye-icon">👁</i></button>
+                <a href="https://nabievabduvohid.github.io/3oy-8/" target="_blank" class="link-btn"><i class="link-icon">🔗</i></a>
+                <a href="https://github.com/Nabievabduvohid" target="_blank" class="github-btn"><i class="github-icon">🐱</i></a>
+            </div>
+        </div>
+    
+        <div class="project-card">
+            <img src="./images/image.png" alt="All Countries">
+            <h2>AOS Animation Scroll</h2>
+            <p>#HTML #CSS #JavaScript #API #aos #Countries</p>
+            <div class="card-icons">
+                <button class="view-btn"><i class="eye-icon">👁</i></button>
+                <a href="https://nabievabduvohid.github.io/3oy-11/" target="_blank" class="link-btn"><i class="link-icon">🔗</i></a>
+                <a href="https://github.com/Nabievabduvohid" target="_blank" class="github-btn"><i class="github-icon">🐱</i></a>
+            </div>
+        </div>
+    
+        <div class="project-card">
+            <img src="./images/games.png" alt="Movie Library">
+            <h2>Games</h2>
+            <p>#JavaScript #LocalStorage #Games #API #TailwindCSS</p>
+            <div class="card-icons">
+                <button class="view-btn"><i class="eye-icon">👁</i></button>
+                <a href="https://nabievabduvohid.github.io/exam/" target="_blank" class="link-btn"><i class="link-icon">🔗</i></a>
+                <a href="https://github.com/Nabievabduvohid" target="_blank" class="github-btn"><i class="github-icon">🐱</i></a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <script src="./main.js"></script>
+</body>  
